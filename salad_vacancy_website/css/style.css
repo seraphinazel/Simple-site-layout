@@ -1,0 +1,513 @@
+/*обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before, *:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height: 100%;width: 100%;font-size: 100%;line-height: 1;font-size: 14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-site-adjust:100%;}
+input,button,textarea{font-family: inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+/*------------------конец обнуления-------------*/
+
+@font-face {
+    font-family: 'Trivia Slab';
+    src: url(../fonts/TriviaSlabRegular-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Trivia Slab Book';
+    src: url(../fonts/TriviaSlabBook.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #fff url('../img/bg1.jpg') 0 0/auto auto repeat-y;
+    font-family: 'Trivia Slab Book', serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Trivia Slab';
+    font-weight: bold;
+}
+
+.burger_menu {
+    display: none;
+}
+
+header>.container {
+    display: flex;
+}
+
+.menu_body {
+    margin: 80px 80px 0 0;
+}
+
+.nav_item>a {
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    font-size: 18px;
+    color: #000;
+    text-shadow: 0px 0px 0.5px #000;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_item>a::after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #000;
+    margin-right: 10px;
+}
+
+.nav_item>a:hover::after {
+    background-color: #7BB85E;
+    border: none;
+}
+
+.nav_item>a:hover {
+    text-shadow: 0px 0px 1px #000;
+}
+
+.nav_item {
+    margin: 0 0 80px 0;
+}
+
+.logo {
+    width: 610px;
+    height: 231px;
+    background: url(../img/logo.png) 0 0/100% auto no-repeat;
+}
+
+#about {
+    width: 750px;
+}
+
+.about_company {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 20px 0 0 30px;
+    width: 500px;
+    text-shadow: 0px 0px 0.5px #000;
+}
+
+.about_need {
+    font-size: 30px;
+    margin: 100px 0 0 30px;
+    width: 500px;
+}
+
+.about_remote {
+    font-size: 24px;
+    color: #7BB85E;
+    margin: 100px 0 40px 30px;
+}
+
+li {
+    font-size: 24px;
+    line-height: 32px;
+    padding-left: 30px;
+}
+
+li.nav_item {
+    padding-left: 0;
+}
+
+.about_jobs>li::before,
+.job_item_req ul>li::before,
+.job_item_plus ul>li::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #7BB85E;
+    margin: 10px 15px 0 -25px;
+}
+
+.job_item_title {
+    width: 700px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.job_item_title h2,
+.job_item_title span {
+    font-family: 'Trivia Slab';
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.job_item_title span {
+    display: inline-block;
+    width: 83px;
+    height: 110px;
+    padding: 30px 20px;
+    background: url(../img/round_frame.png) 0 0/contain no-repeat;
+    flex: 0 0 110px;
+}
+
+.job_item_title h2 {
+    margin: 30px 0;
+}
+
+.salary {
+    font-family: 'Trivia Slab';
+    font-size: 36px;
+    font-weight: bold;
+    color: #7BB85E;
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.job_item_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 24px;
+}
+
+.job_item_descr {
+    flex: 1 1 100%;
+    padding: 30px 150px;
+}
+
+.job_item_req {
+    flex: 0 1 50%;
+}
+
+.job_item_plus {
+    flex: 0 1 50%;
+}
+
+.job_item_plus h3 {
+    color: #767676;
+}
+
+.job_item_req h3,
+.job_item_plus h3 {
+    margin: 30px 0 25px 5px;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#contacts button {
+    font-size: 30px;
+    width: 360px;
+    height: 105px;
+    background: url(../img/frame.png) 0 0/contain no-repeat;
+    transition: all 0.3s ease 0s;
+}
+
+#contacts button:hover {
+    transform: scale(1.05);
+    background-color: rgba(123, 184, 94, 0.2);
+}
+
+#contacts button:active {
+    transform: scale(1.02);
+    background-color: rgba(123, 184, 94, 0.5);
+}
+
+#contacts span {
+    font-family: 'Trivia Slab';
+}
+
+footer p {
+    font-family: 'Trivia Slab Book';
+    font-size: 20px;
+    padding: 47px 0;
+}
+
+footer {
+    padding: 50px 0;
+}
+
+/* SLIDER */
+.slider {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.slick-track {
+    display: flex;
+}
+.slick-list {
+    overflow: hidden;
+}
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    border: solid #7BB85E;
+    border-width: 4px 4px 0 0;
+    border-radius: 3px;
+    background: transparent;
+}
+.slick-arrow.slick-prev {
+    left: 0;
+    transform: rotate(-135deg);
+    margin-left: -20px;
+}
+.slick-arrow.slick-next {
+    right: 0;
+    transform: rotate(45deg);
+    margin-right: -20px;
+}
+.slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slick-dots li {
+    list-style: none;
+    margin: 0 10px;
+}
+.slick-dots button {
+    font-size: 0;
+    width: 18px;
+    height: 18px;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid black;
+    transition: all 0.3s ease 0s;
+}
+
+.slick-dots li.slick-active button{
+    border: none;
+    background: #7BB85E;
+}
+
+@media all and (max-width: 1160px) {
+    .container {
+        padding: 30px;
+    }
+} 
+
+.mobile_logo {
+    display: none;
+}
+
+@media all and (max-width: 900px) {
+    .logo,
+    #about,
+    .job_item_title {
+       width: 500px;
+    }
+    .job_item_descr {
+        padding: 20px 30px;
+    }
+    .job_item_req,
+    .job_item_plus {
+        flex: 0 1 100%;
+    }
+    footer {
+        padding: 30px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    body.lock {
+        overflow: hidden;
+    }
+    p, li {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    header>.container {
+        display: block;
+        max-width: 700px;
+        min-width: 300px;
+    }
+    #about,
+    .job_item_title {
+       width: 100%;
+    }
+    .logo {
+        display: none;
+    }
+    .mobile_logo {
+        display: block;
+        background: url(../img/logo.png) 0 0/100% auto no-repeat;;
+        width: 160px;
+        height: 61px;
+        margin: 0 0 0 15px;
+        position: relative;
+        z-index: 5;
+    }
+    .about_remote {
+        margin: 0 0 10px;
+    }
+    .job_item_title span {
+        display: inline-block;
+        width: 50px;
+        height: 60px;
+        padding: 12px 7px;
+        background: url(../img/round_frame.png) 0 0/contain no-repeat;
+        flex: 0 0 50px;
+        font-size: 40px;
+        margin: 10px 0;
+    }
+    .job_item_title h2 {
+        font-size: 40px;
+        margin: 0;
+        flex: 0 0 150px;
+        margin: 0 0 15px 5px;
+    }
+    .salary {
+        font-size: 24px;
+    }
+    .job_item_descr {
+        padding: 0;
+    }
+    #contacts button {
+        width: 300px;
+        height: 85px;
+        font-size: 24px;
+        margin: 0 0 50px;
+    }
+    .nav_wrap {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        height: 70px;
+    }
+    .nav_wrap:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: 3;
+    }
+    .burger_menu {
+        display: block;
+        position: relative;
+        float: right;
+        width: 20px;
+        height: 30px;
+        margin: 13px 20px;
+        z-index: 5;
+    }
+    .burger_menu:before,
+    .burger_menu:after {
+        content: '';
+        background-color: #7BB85E;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        right: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .burger_menu:before {
+        top: 0;
+    }
+    .burger_menu:after {
+        bottom: 0;
+    }
+    .burger_menu.active:before {
+        width: 100%;
+        height: 2px;
+        transform: rotate(45deg);
+        top: 14px;
+    }
+    .burger_menu.active:after {
+        width: 100%;
+        height: 2px;
+        transform: rotate(-45deg);
+        bottom: 14px;
+    }
+    .menu_body {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #EEF4DF;
+        margin: 0;
+        padding: 100px;
+        text-align: center;
+        transition: all 0.3s ease 0s;
+        overflow: auto;
+    }
+    .menu_body.active {
+        top: 0;
+    }
+    .nav_item>a {
+        writing-mode: horizontal-tb;
+        transform: none;
+        text-shadow: none;
+    }
+    .nav_item>a::after {
+        display: none;
+    }
+    .header_wrap {
+        margin: 280px 0 0 0;
+    }
+    .about_company {
+        width: 85%;
+        margin: 0;
+        text-align: left;
+    }
+    .about_need {
+        width: 100%;
+        margin: 40px 0 150px 0;
+        text-align: center;
+    }
+    footer .container {
+        justify-content: flex-end;
+        padding: 30px 30px 10px;
+    }
+    footer p {
+        padding: 20px 0 0 0;
+        font-size: 16px;
+    }
+    footer {
+        padding: 0;
+    }
+}
+
+@media all and (max-width: 500px) {
+    body {
+        background: url('../img/mobile1.jpg') 0 0/cover repeat-y;
+    }
+    button.slick-arrow.slick-next,
+    button.slick-arrow.slick-prev {
+        display: none !important;
+    }
+}
